@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 6</title>
+
+  <style>
+    
+    
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+    }
+    
+    .imagem {
+      display: flex;
+      padding-left: 450px;
+      align-items: center;
+    
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="imagem">
+
+      <img src="lampada-off.jpg" id="fotoLampada" alt="Lâmpada">
+
+    </div>
+
+  </div>
+
+  <script>
+
+    let img = document.getElementById('fotoLampada')
+
+    img.addEventListener('mouseover', () => {
+      img.src = 'lampada-on.jpg'
+    }
+)
+
+    img.addEventListener('mouseout', () => {
+      img.src = 'lampada-off.jpg'
+    }
+)
+  </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 function buscarCep(){
-    const cep = document.getElementById("cep").value
+    const cep = document.getElementById('cep').value
 
-    const url = `https://viacep.com.br/ws/$(cep)/json`
+    const url = `https://viacep.com.br//ws/${cep}/json`
    
     fetch(url)
         .then((response) => {
@@ -12,12 +12,12 @@ function buscarCep(){
             if(data.erro){
 
              alert('cep invalido')}
-             return
+            
 
              document.getElementById("logradouro").value = data.logradouro
              document.getElementById("bairro").value = data.bairro
              document.getElementById("cidade").value = data.localidade
-             document.getElementById("estado").value = data.uf
+             document.getElementById("estado").value = data.estado
         })
         .catch((error) =>{
             console.log(error)
